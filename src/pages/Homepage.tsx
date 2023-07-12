@@ -1,31 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
+import { MovieContext } from '../context/MovieContext';
+
+
+
+
 
 const Homepage = () => {
-  useEffect(()=>{
-    
-const fetchData=async()=>{
-const options = {
-  method: 'GET',
-  url: 'https://imdb-top-100-movies.p.rapidapi.com/',
-  headers: {
-    'X-RapidAPI-Key': '32308d209cmsh4eed8e2c3913496p1b681fjsneee5d1d2d536',
-    'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
-  }
-};
-
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
-}  
-fetchData()
-},[])
+  const {movies}=useContext(MovieContext)
+ 
   return (
-    <div>Homepage</div>
+    <div className='grid grid-cols-4 gap-2' >
+    {movies.length > 0 ? (
+      movies.map((movie)=>(
+      <div className='' key={movies.id}>
+        <p>{movie.title}</p>
+        <img src={movie.thumbnail} width='150px'/>
+      </div>
+      ))
+      ):('')}
+
+      </div>
     
+
   )
 }
 
