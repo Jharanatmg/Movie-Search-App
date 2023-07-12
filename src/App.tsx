@@ -1,5 +1,11 @@
+import Navbar from "./components/navbar";
+
 function App() {
-  return <>Filmography</>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
