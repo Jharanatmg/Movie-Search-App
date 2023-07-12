@@ -1,5 +1,5 @@
 import React from 'react'
-import Inputfield from '../components/inputfield'
+import Inputfield from '../components/Inputfield'
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
 import { Formik,Form } from 'formik';
@@ -30,12 +30,13 @@ const Registerpage = () => {
     }
 
   return (
-    <div>
+    <div className='flex justify-center'>
         <Formik 
         initialValues={initialvalues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}>
-            <Form>
+
+            <Form className='border-2  flex flex-col p-4'>
                 <Inputfield type='text' name='name' label='Name'/>
                 <Inputfield type='text' name='username' label='Username'/>
                 <Inputfield type='text' name='email' label='Email'/>

@@ -7,7 +7,7 @@ interface IButton{
 
 }
 
-const Button:React.FC<IButton> = ({className,onClick,text, type}) => {
+const button:React.FC<IButton> = ({className,onClick,text, type}) => {
   return (
   
         <button className={className} type={type} onClick={onClick}>{text}</button>
@@ -15,4 +15,4 @@ const Button:React.FC<IButton> = ({className,onClick,text, type}) => {
   )
 }
 
-export default Button
+export default button
