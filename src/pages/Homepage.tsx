@@ -1,25 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react'
 //import axios from 'axios';
 import { MovieContext } from '../context/MovieContext';
+//import SearchBar from '../components/searchbar';
+import { Link } from 'react-router-dom';
+import Navbar from '../components/navbar';
+import SearchBar from '../components/searchbar';
 
 const Homepage = () => {
-  const {movies}=useContext(MovieContext)
-  //<div className='grid grid-cols-4 gap-2' >
-  //{movies.length > 0 ? (
-    //movies.map((movie)=>(
-    //<div className='' key={movies.id}>
-      //<p>{movie.title}</p>
-      //<img src={movie.thumbnail} width='150px'/>
-    //</div>
-    //))
-    //):('')}
-
-    //</div>
+  const {boxOffice}=useContext(MovieContext)
   
+    
 
  
   return (
    <>
+  
+   <SearchBar/>
+   {
+   boxOffice ? boxOffice.map((item)=>(
+    <li key={item.id}>
+      <Link to={`/boxoffice/${item.id}`}>{item.title}</Link>
+    </li>
+   ))
+  :('')}
    
    </>
   )
