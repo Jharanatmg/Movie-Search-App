@@ -7,6 +7,7 @@ import SearchBar from "./components/searchbar";
 import Navbar from "./components/navbar";
 import MoviePage from "./pages/MoviePage";
 import bimg from "./assets/movie-9pvmdtvz4cb0xl37.jpg";
+import Searchpage from "./pages/Searchpage";
 function App() {
   return <>
   
@@ -18,6 +19,7 @@ function App() {
     <Route path="Registerpage" element={<Registerpage/>}></Route>
     <Route path="Loginpage" element={<Loginpage/>}></Route>
     <Route path="/boxoffice/:id" element={<MoviePage/>}></Route>
+    <Route path="Searchpage" element={<Searchpage/>}></Route>
   </Routes>
   </div>
   

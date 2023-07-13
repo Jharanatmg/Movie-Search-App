@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import{AiOutlineSearch} from 'react-icons/ai'
 
 function Navbar() {
   return (
@@ -14,6 +15,7 @@ function Navbar() {
         <a> CINEMA REPERTORY </a>
         <a> TV PROGRAM </a>
         <a> MAGAZINE </a>
+       <Link to='/Searchpage'> {<AiOutlineSearch size={30}/> }</Link>
       </div>
       <div className="mt-2 h-12 bg-blue-500 divide-x-2 flex items-center text-sm">
        
