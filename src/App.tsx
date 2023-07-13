@@ -5,7 +5,7 @@ import Registerpage from "./pages/Registerpage";
 import Homepage from "./pages/Homepage";
 import SearchBar from "./components/SearchBar";
 import Navbar from "./components/navbar";
-import bimg from './assets/movie-9pvmdtvz4cb0xl37.jpg'
+import bimg from "./assets/movie-9pvmdtvz4cb0xl37.jpg";
 function App() {
   return <>
   
