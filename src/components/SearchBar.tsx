@@ -24,7 +24,7 @@ const SearchBar = () => {
     <input className='rounded-md p-2 w-96' type='text' placeholder='Tiltle of the movie...' onChange={handleInput}/>
     <button className='pl-2 text-white'><AiOutlineSearch size={40}/></button></div>
     </div>
-    <div className='grid grid-cols-3 gap-3 text-white mt-5 bg-gradient-to-t from-black via-black  to-bg-transparent place-contents-center w-full'>
+    <div className='grid grid-cols-3 gap-3 text-white mt-5 bg-gradient-to-t from-black via-black to-bg-transparent place-contents-center w-full'>
     {filterData.map ((movie)=>(
         <div key={movie.id} className='border-2 border-zinc-700 rounded-md  backdrop-blur-sm p-4 text-center backdrop-brightness-100 flex flex-col justify-center items-center'>
             <p>{movie.title}</p>
