@@ -16,7 +16,7 @@ const Homepage = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500, 
@@ -28,18 +28,22 @@ const Homepage = () => {
  
   return (
    <>
-  
-   <SearchBar/>
+   <div className='w-full bg-gradient-to-t from-black via-black to-transparent'>
+  <h1 className='text-white text-center text-3xl mt-44 mb-44'>Find Perfect movie for your evening.</h1>
+   <div className='w-[95%] mx-auto '>
+   <h1 className='text-white text-2xl'>Top Trending</h1>
    {
    boxOffice ?(
+    
    <Slider{...settings}> 
+   
     {boxOffice.map((item)=>(
-    <div key={item.id} className='text-white w-96 h-96 border-2 mx-auto mt-12  text-center flex justify-center items-center'>
+    <div key={item.id} className='text-white border-2 backdrop-blur-md h-74 text-center  flex flex-col justify-center align-top'>
       
       <Link to={`/boxoffice/${item.id}`}>
-        <h1 className='text-xl font-semibold mb-2'>{item.title}</h1>
-        <img src={item.image[0][1]} style={{height:'300px', width:'250px'}}/>
-       <p>{item.description}</p>
+       
+        <img src={item.image[0][1]} style={{height:'300px', width:'300px'}}/>
+      
       
       </Link>
       
@@ -49,7 +53,8 @@ const Homepage = () => {
    )
    
   :('')}
-   
+   </div>
+   </div>
    </>
   )
 }

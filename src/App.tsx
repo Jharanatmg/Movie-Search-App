@@ -11,8 +11,8 @@ import Searchpage from "./pages/Searchpage";
 function App() {
   return <>
   
-  <div className="backgroundImg h-screen" style={{ backgroundImage: `url(${bimg})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
-  <div className="h-screen  bg-black bg-opacity-80">
+  <div className="backgroundImg h-screen w-full" style={{ backgroundImage: `url(${bimg})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
+  <div className="h-screen w-full  bg-black bg-opacity-80">
   <Navbar/>
   <Routes>
      <Route path="/" element={<Homepage/>}></Route>
