@@ -9,6 +9,10 @@ interface Movie{
     title:string,
     image:string,
     thumbnail:string,
+    description:string,
+    trailer:string,
+    rating:number,
+
 }
 interface IMovieProvider{
     children:ReactNode
