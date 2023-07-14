@@ -7,7 +7,7 @@ interface IItem{
     image:string,
     description:string,
     trailer:string,
-    rating:number,
+    rating:string,
 
 }
 const SearchBar = () => {
