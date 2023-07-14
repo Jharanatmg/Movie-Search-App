@@ -30,13 +30,14 @@ const Registerpage = () => {
     }
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex flex-col backdrop-blur-sm justify-center items-center p-4 h-auto w-[50%] mx-auto mt-12 text-white border-2'>
+        <h1 className='text-3xl mb-4 mt-4'>REGISTER</h1>
         <Formik 
         initialValues={initialvalues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}>
 
-            <Form className='border-2  flex flex-col p-4'>
+            <Form className=' flex flex-col p-4 text-white'>
                 <Inputfield type='text' name='name' label='Name'/>
                 <Inputfield type='text' name='username' label='Username'/>
                 <Inputfield type='text' name='email' label='Email'/>

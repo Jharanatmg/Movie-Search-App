@@ -29,9 +29,11 @@ const Homepage = () => {
   return (
    <>
    <div className='w-full bg-gradient-to-t from-black via-black to-transparent'>
-  <h1 className='text-white text-center text-3xl mt-44 mb-44'>Find Perfect movie for your evening.</h1>
+  <h1 className='text-white text-center text-3xl mt-32'>Find Perfect movie for your evening</h1>
+  <h1 className='text-white text-center text-3xl'>only on</h1>
+  <h1 className='text-white text-center text-3xl font-mono mt-2 underline'>Filmography</h1>
    <div className='w-[95%] mx-auto '>
-   <h1 className='text-white text-2xl'>Top Trending</h1>
+   <h1 className='text-white text-2xl mb-2'>Top Trending</h1>
    {
    boxOffice ?(
     

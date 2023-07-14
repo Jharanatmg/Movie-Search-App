@@ -36,16 +36,19 @@ const SearchBar = () => {
     <input className='rounded-md p-2 w-96' type='text' placeholder='Tiltle of the movie...' onChange={handleInput}/>
     <button className='pl-2 text-white'><AiOutlineSearch size={40}/></button></div>
     </div>
-    {input &&
-    <div className='grid grid-cols-3 gap-4 p-2 text-white mt-5 bg-gradient-to-t from-black via-black  to-bg-transparent place-contents-center w-full'>
+    {input && filterData.length>0 &&
+    <div className='bg-gradient-to-b from-transparent via-black to-black backdrop-blur-sm'>
+    <div className='grid grid-cols-3 gap-4 p-2 text-white mt-5 bg-gradient-to-t from-black via-black to-bg-transparent place-contents-center '>
+   
     {filterData.map ((movie)=>(
-        <div key={movie.id} onClick={()=>handleOpen(movie.id)} className='border-2 border-zinc-700 rounded-md  backdrop-blur-sm p-4 text-center backdrop-brightness-100 flex flex-col justify-center items-center'>
-            <p className='mb-2'>{movie.title}</p>
+        <div key={movie.id} onTouchMove={()=>handleOpen(movie.id)} className='border-2 border-zinc-700 rounded-md  backdrop-blur-sm p-4 text-center backdrop-brightness-100 flex flex-col justify-center items-center'>
+            <p className='mb-2 text-2xl'>{movie.title}</p>
             <img src={movie.image} width='250'/>
         </div>
         
     ))}
     
+    </div>
     </div>
 }
 {open ? (
