@@ -23,19 +23,20 @@ const Loginpage = () => {
     }
 
   return (
-    <div className='flex justify-center items-center '>
+    <div className='flex justify-center items-center text-white '>
         <Formik 
         initialValues={initialvalues}
         onSubmit={handleSubmit}
         validationSchema={validationSchema} >
             {()=>{
                 return(
-                    <div className='flex justify-center items-center h-96 border-2 w-[50%]'>
+                    <div className='flex flex-col justify-center p-4  h-96 border-2 w-[50%] mt-12 backdrop-blur-sm'>
+                       <h1 className='text-3xl mb-4'>LOGIN</h1>
                         <Form>
                            <Inputfield type='text' name='emailAddress' label='Email Address'/>
                            <Inputfield type='password' name='password' label='Password'/>
                            <Inputfield type='checkbox' name='checkbox' label='I accept all terms and conditions.'/>
-                           <Button type='submit' className='border-2' text='Login'/>
+                           <Button type='submit' className='border-2 w-full' text='Login'/>
 
                         </Form>
                         <ToastContainer className='ml-auto'/>

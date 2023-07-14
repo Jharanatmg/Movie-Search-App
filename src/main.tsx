@@ -7,11 +7,13 @@ import { MovieProvider } from './context/MovieContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+      <MovieProvider>
     <BrowserRouter>
-    <MovieProvider>
+  
     <App />
-    </MovieProvider>
+    
     </BrowserRouter>
+    </MovieProvider>
 
   </React.StrictMode>,
 )
